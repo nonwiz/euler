@@ -20,3 +20,17 @@ int euler1(int limit) {
 }
 
 ```
+||
+```dart
+int euler1(int limit) {
+  return loopSum(3, limit) + loopSum(5, limit);
+}
+
+int loopSum(int num, int limit) {
+  int sum = 0;
+  for (int i = num; i < limit; i += num) {
+    sum += i;
+  }
+  return sum;
+}
+```
